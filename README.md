@@ -47,6 +47,11 @@ This file contains a number of front-end interview questions that can be used wh
 #### HTML Questions:
 
 * What does a `doctype` do?
+
+> The doctype declaration tells the browser which version of HTML the page is using (i.e. 4.01 strict, 4.01 transitional, HTML5, etc). If no doctype declaration exists, the browser will render the page in quirks mode rather than standards mode.
+
+> Modern browsers don't care about the exact doctype, all it's needed for is to trigger standards mode. This is why the HTML5 doctype is so simple: <!DOCTYPE html> There's no need for a specific version today or in the future because all we're doing is telling the browser to operate in standards mode.
+
 * What's the difference between standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
 * Are there any problems with serving pages as `application/xhtml+xml`?
