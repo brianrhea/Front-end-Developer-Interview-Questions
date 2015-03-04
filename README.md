@@ -53,6 +53,9 @@ This file contains a number of front-end interview questions that can be used wh
 > Modern browsers don't care about the exact doctype, all it's needed for is to trigger standards mode. This is why the HTML5 doctype is so simple: <!DOCTYPE html> There's no need for a specific version today or in the future because all we're doing is telling the browser to operate in standards mode.
 
 * What's the difference between standards mode and quirks mode?
+
+> Quirks mode is used by browsers to render (mostly) legacy content that was developed in the pre-standards era. The most prominent example probably being the IE box model bug which calculates the width of a box differently than the CSS spec. Because IE5 (and prior versions) were so prominent, a lot of CSS was written in a way to accommodate IE's non-standard implementation.
+
 * What's the difference between HTML and XHTML?
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
