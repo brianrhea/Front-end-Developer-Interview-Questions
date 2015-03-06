@@ -81,7 +81,7 @@ This file contains a number of front-end interview questions that can be used wh
 </div>
 ```
 
-> It's perfectly fine to reuse `.person` and `.person-name` multiple times. If we had goofed and used `#brian` on Adrian's div giving us two occurences of that id, the page would still render perfectly fine, the browser isn't going to complain, crash, or do anything noticeable to the user. But, `getElementByID('brian');` would be unreliable if you were to try and target that element by the ID.
+> It's perfectly fine to reuse `.person` and `.person-name` multiple times. If we had goofed and used `#brian` on Adrian's `<p>` giving us two occurences of that id, the page would still render perfectly fine, the browser isn't going to complain, crash, or do anything noticeable to the user. But, `getElementByID('brian');` would be unreliable if you were to try and target that element by the ID.
 
 > As far as how the CSS would behave, one might expect that the following code would result "Brian Rhea" being bold, black text, because those values are set after the ID with more specificity and would therefore override it.
 
