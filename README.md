@@ -72,9 +72,9 @@ This file contains a number of front-end interview questions that can be used wh
 
 > IDs should only appear once in a page's markup, classes can appear as many times as you'd like. An ID's properties as specified in CSS will also take precendence over a class, even if the class appears after the ID and has more selector specificity. For example:
 
-`<div class="person" id="person">
+```<div class="person" id="person">
   <p class="person-name">Brian Rhea</p>
-</div>`
+</div>```
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
