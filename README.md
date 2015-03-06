@@ -100,9 +100,11 @@ This file contains a number of front-end interview questions that can be used wh
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
-> Resetting is a little bit of nuclear option in that it targets every single html element and reduces it to scratch. No margin, no padding, no border, nothing. It's helpful because you're starting from the same place in every browser, but it removes some inherently sensible properties such as resetting the `<sub>` element's `vertical-align` property to `baseline` rather than the default `sub`.
+> Resetting is a little bit of a nuclear option in that it targets every single html element and reduces it to scratch. No margin, no padding, no border, nothing. It's helpful because you're starting from the same place in every browser, but it removes some inherently sensible properties such as resetting the `<sub>` element's `vertical-align` property to `baseline` rather than the default `sub`.
 
 > Normalizing holds on to some reasonable defaults and tries to get you to common ground across all browsers without being as dramatic as a full reset.
+
+> That said, I've always used Eric Meyer's reset css because – in my experience – the instances where resetting creates more work than it had saved are few and far between.
 
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
