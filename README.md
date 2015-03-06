@@ -70,15 +70,40 @@ This file contains a number of front-end interview questions that can be used wh
 
 * What is the difference between classes and ID's in CSS?
 
-> IDs should only appear once in a page's markup, classes can appear as many times as you'd like. An ID's properties as specified in CSS will also take precendence over a class, even if the class appears after the ID and has more selector specificity. For example:
+> IDs should only appear once in a page's markup, classes can appear as many times as you'd like. An ID's properties as specified in CSS will also take precendence over a class, even if the class appears after the ID and has more selector specificity. For example, given the following html:
 
 ```html
-<div class="person" id="person">
-  <p class="person-name">Brian Rhea</p>
+<div class="person">
+  <p class="person-name" id="brian">Brian Rhea</p>
+</div>
+<div class="person">
+  <p class="person-name" id="adrian">Adrian Beltre</p>
 </div>
 ```
 
+> It's perfectly fine to reuse `.person` and `.person-name` multiple times. If we had goofed and used `#brian` on Adrian's div giving us two occurences of that id, the page would still render perfectly fine, the browser isn't going to complain, crash, or do anything noticeable to the user. But, `getElementByID('brian');` would be unreliable if you were to try and target that element by the ID.
+
+> As far as how the CSS would behave, one might expect that the following code would result "Brian Rhea" being bold, black text, because those values are set after the ID with more specificity and would therefore override it.
+
+```css
+#brian {
+  color: #f00;
+  font-weight: 400;
+}
+.person .person-name {
+  color: #000;
+  font-weight: 700;
+}
+```
+
+> But that's not the case. If the ID and class are on the same element, the ID always wins (256 chained classes used to override an ID, [but that bug has been fixed](http://codepen.io/chriscoyier/pen/lzjqh)).
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
+> Resetting is a little bit of nuclear option in that it targets every single html element and reduces it to scratch. No margin, no padding, no border, nothing. It's helpful because you're starting from the same place in every browser, but it removes some inherently sensible properties such as resetting the `<sub>` element's `vertical-align` property to `baseline` rather than the default `sub`.
+
+> Normalizing holds on to some reasonable defaults and tries to get you to common ground across all browsers without being as dramatic as a full reset.
+
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
 * What are the various clearing techniques and which is appropriate for what context?
