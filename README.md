@@ -104,7 +104,7 @@ This file contains a number of front-end interview questions that can be used wh
 
 > Normalizing holds on to some reasonable defaults and tries to get you to common ground across all browsers without being as dramatic as a full reset.
 
-> That said, I've used Eric Meyer's reset css in personal projects in the past because – in my experience – the instances where resetting creates more work than it had saved are few and far between. But, all of my recent projects have used Bootstrap as the underlying framework, and BS uses normalize which is fine by me. I'm not dogmatic on this one.
+> That said, I've used Eric Meyer's reset css in personal projects in the past because – in my experience – the instances where resetting creates more work than it had saved are few and far between. But, all of my recent projects have used Bootstrap as the underlying front-end framework, and BS uses normalize which is fine by me. I'm not dogmatic on this one.
 
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
