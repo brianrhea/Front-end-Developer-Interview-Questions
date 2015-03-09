@@ -139,6 +139,39 @@ This file contains a number of front-end interview questions that can be used wh
 #### JS Questions:
 
 * Explain event delegation
+
+> Event delegation allows you to assign event listeners to the parent of child elements, so that you don't have to add listeners to every single node that should trigger the event's behavior.
+
+> Take the following code for example:
+
+```html
+<ul class="ski-resorts">
+  <li><a class="resort" id="vail" href="#">Vail <em>$$$$</em></a></li>
+  <li><a class="resort" id="copper-mountain" href="#">Copper Mountain <em>$$$</em></a></li>
+  <li><a class="resort" id="eldora" href="#">Eldora <em>$</em></a></li>
+</ul>
+```
+
+> If I want to trigger a function whenever a link with `.resort` is clicked, thanks to event delegation I'm in business with the following bit of jQuery:
+
+```jquery
+$('.resort').click(function(){
+  // do some stuff
+});
+```
+
+> Even if the user clicks on one of those `<em>` tags, the event bubbles up to the listener on the `.resort` class.
+
+> You can see this in action by modifying that bit of jQuery to:
+
+```jquery
+$('.resort').click(function(e){
+  console.log(e.target);
+});
+```
+
+> When you click on the name of the ski resort, the `<a>` element gets printed out in the console; when you click on a dollar sign, only the `<em>` element is printed because that is the child node that was clicked.
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * How do you go about testing your JavaScript?
