@@ -154,7 +154,7 @@ This file contains a number of front-end interview questions that can be used wh
 
 > If I want to trigger a function whenever a link with `.resort` is clicked, thanks to event delegation I'm in business with the following bit of jQuery:
 
-```jquery
+```javascript
 $('.resort').click(function(){
   // do some stuff
 });
@@ -164,7 +164,7 @@ $('.resort').click(function(){
 
 > You can see this in action by modifying that bit of jQuery to:
 
-```jquery
+```javascript
 $('.resort').click(function(e){
   console.log(e.target);
 });
